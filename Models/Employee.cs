@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace EmployeeManager_RazorPages.Models
 {
     [Table("Employees")]
-    public partial class Employee
+    public class Employee
     {
         // Copied attributes from MVC project, over generated from EF.
 

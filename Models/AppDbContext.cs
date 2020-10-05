@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace EmployeeManager_RazorPages.Models
 {
-    public partial class AppDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext()
         {
