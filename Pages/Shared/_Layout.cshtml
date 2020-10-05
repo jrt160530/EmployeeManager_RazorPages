@@ -1,0 +1,42 @@
+﻿<!DocType html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee Manager</title>
+    @*This is a Razor comment. Unlike HTML comments, Razor comments
+        are not sent to the client.*@
+</head>
+
+<body>
+    <h1>Employee Manager</h1>
+    <hr />
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <br />
+    <hr />
+    <div class="container">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <h2>You are signed in as @User.Identity.Name</h2>
+            <form asp-page="/Security/SignOut" method="post">
+                <button type="submit">Sign Out</button>
+            </form>
+        }
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
