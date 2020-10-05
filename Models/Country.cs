@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EmployeeManager_RazorPages.Models
 {
-    public partial class Country
+    public class Country
     {
         [Key]
         public int CountryId { get; set; }
