@@ -45,7 +45,7 @@ namespace EmployeeManager_RazorPages.Models
         [Required(ErrorMessage = "Hire date is required")]
         public DateTime HireDate { get; set; }
 
-        [Column("County")]
+        [Column("Country")]
         [Display(Name = "Country")]
         [Required(ErrorMessage = "Country is required")]
         [StringLength(30, ErrorMessage = "Country must be less than 30 characters")]
